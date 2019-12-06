@@ -16,6 +16,15 @@ class Scraper
     end
   end
   
+  def get_page
+  end 
+  
+  def make_courses
+  end 
+  
+  def print_courses
+  end 
+  
 end
 
 
