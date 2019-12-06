@@ -34,10 +34,14 @@ class Scraper
    def make_courses
      self.get_couses.each do |post|
        course = Course.new
+       course.title = post.css("h2").text 
+       course.schedule = post.css(".date").text 
+       course.description = post.css("p").text 
+ end 
 
   
   
 end
-Scraper.new.get_page
+Scraper.new.print_courses
 
 
