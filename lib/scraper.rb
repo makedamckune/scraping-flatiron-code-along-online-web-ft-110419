@@ -15,7 +15,7 @@ class Scraper
         puts "  Description: #{course.description}"
       end
     end
-  
+  end
   
   def get_page
     doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
@@ -38,7 +38,7 @@ class Scraper
     course.schedule = post.css(".date").text
     course.description = post.css("p").text
   end
-
+end 
   
   
 Scraper.new.print_courses
